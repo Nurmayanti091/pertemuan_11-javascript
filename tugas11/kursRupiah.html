@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Kurs Rupiah</title>
+    <script>
+
+        function hitungKurs() {
+            let nilai = document.getElementById("nilaian").value;
+            let MataUang = document.getElementById("MataUang").value;
+
+            console.log(nilai * MataUang);
+
+            let hasil = document.getElementById("hasil");
+            hasil.innerHTML = nilai * MataUang;
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Menghitung Kurs Rupiah</h1>
+    <tr>
+        <td>Masukan Nilai per dollar $</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" id="nilaian" onchange="hitungKurs()">
+        </td>
+        <td>
+            <select name="" id="MataUang" onchange="hitungKurs()">
+                <option value="14650">Dollar US</option>
+            </select>
+        </td>
+        <td>
+            <p id="hasil">hasil Rp:</p>
+        </td>
+    </tr>
+</body>
+
+</html>
